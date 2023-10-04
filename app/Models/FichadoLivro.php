@@ -9,12 +9,13 @@ class FichadoLivro extends Model
 {
     use HasFactory;
 
-    protected $table="fichadosLivros";
-    protected $primaryKey="id_ficha";
-    protected $fillable=["id_ficha", "nomedoUsuario"];
-    protected $timestamps=false;
+    protected $table = "fichadosLivros";
+    protected $primaryKey = "id_ficha";
+    protected $fillable = ["id_ficha", "nomedoUsuario"];
+    protected $timestamps = false;
 
-    public function usuarios(){
+    public function usuarios()
+    {
         return $this->belongsTo(Usuario::class);
 
     }
